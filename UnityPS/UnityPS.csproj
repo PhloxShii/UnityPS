@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC62B137-4DD4-4AE4-9A1A-3463FA10BC09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UnityPS</RootNamespace>
+    <AssemblyName>UnityPS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\Unity\DokiPlus\AuxiliaryFiles\GameAssemblies\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\Unity\DokiPlus\AuxiliaryFiles\GameAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Unity\DokiPlus\AuxiliaryFiles\GameAssemblies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\Unity\DokiPlus\AuxiliaryFiles\GameAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\Unity\DokiPlus\AuxiliaryFiles\GameAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\Unity\DokiPlus\AuxiliaryFiles\GameAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\Unity\DokiPlus\AuxiliaryFiles\GameAssemblies\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonSelectionState.cs" />
+    <Compile Include="ButtonStateDisplayer.cs" />
+    <Compile Include="CollectionHelper.cs" />
+    <Compile Include="CoroutineFlags.cs" />
+    <Compile Include="CoroutineID.cs" />
+    <Compile Include="CoroutineManager.cs" />
+    <Compile Include="CustomStream.cs" />
+    <Compile Include="CustomStreamFileSystem.cs" />
+    <Compile Include="DebugInput.cs" />
+    <Compile Include="GameObjectHelpers.cs" />
+    <Compile Include="GradientColorImage.cs" />
+    <Compile Include="HashUtility.cs" />
+    <Compile Include="IDebugConsole.cs" />
+    <Compile Include="IFileSystem.cs" />
+    <Compile Include="Input\CustomMouseCursor.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MockDebugConsole.cs" />
+    <Compile Include="PauseManager.cs" />
+    <Compile Include="Platform\DesktopFileSystem.cs" />
+    <Compile Include="Platform\IUserAccount.cs" />
+    <Compile Include="Platform\PlatformManager.cs" />
+    <Compile Include="Platform\UserAccount.cs" />
+    <Compile Include="Platform\VirtualKeyboard.cs" />
+    <Compile Include="Platform\VirtualKeyboardBase.cs" />
+    <Compile Include="PlayerPrefsFileSystem.cs" />
+    <Compile Include="Pool\Pool.cs" />
+    <Compile Include="Pool\PoolHandle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScrollRectEventFix.cs" />
+    <Compile Include="ShowButtonPressed.cs" />
+    <Compile Include="SpriteAssetBundleRef.cs" />
+    <Compile Include="ToggleButtonStateDisplayer.cs" />
+    <Compile Include="UIHelper.cs" />
+    <Compile Include="WaitForInputAndPause.cs" />
+    <Compile Include="WaitForPause.cs" />
+    <Compile Include="WaitForSecondsAndPause.cs" />
+    <Compile Include="WaitForSecondsOrInputAndPause.cs" />
+    <Compile Include="XorFileStream.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
